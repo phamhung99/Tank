@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
         {
             inGame = false;
             //Debug.Log("Gameover");
-            Invoke("GameOver", 1f);
+            Invoke("GameOver", 1.5f);
         }
     }
 

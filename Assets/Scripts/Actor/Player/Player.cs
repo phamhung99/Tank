@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : Actor
 {
     public static Player instance;
+    public GameObject explode;
     
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,11 @@ public class Player : Actor
         MovementPlayer();
     }
 
-    
+    public override void Kill()
+    {
+        Instantiate(explode, transform.position, transform.rotation);
+        base.Kill();
+    }
 
     void MovementPlayer()
     {

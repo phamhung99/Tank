@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] float speed;
+
+    [SerializeField] GameObject explode;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,7 @@ public class Bullet : MonoBehaviour
                 targetHit.Damage(damage);
             }
         }
+        Instantiate (explode, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

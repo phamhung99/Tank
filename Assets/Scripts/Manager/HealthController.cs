@@ -26,7 +26,7 @@ public class HealthController : MonoBehaviour
 		if (newScale < 0)
         {
             newScale = 0 ;
-        }else Debug.Log(newScale); 
+        } 
 		Vector2 desiredScale = new Vector2(newScale, 1);
 		greenHealthBar.localScale = Vector2.SmoothDamp(greenHealthBar.localScale, desiredScale, ref vel, smoothTime);
 	}

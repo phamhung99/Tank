@@ -84,7 +84,7 @@ public class Actor : MonoBehaviour
         }
     }
 
-    public void Kill()
+    public virtual void Kill()
     {
         Destroy(gameObject);
         Death();

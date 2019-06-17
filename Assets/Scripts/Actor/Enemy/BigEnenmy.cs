@@ -26,7 +26,7 @@ public class BigEnenmy : Enemy
             angleDegree = Mathf.Atan2(dictationTarget.x, dictationTarget.y) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angleDegree, Vector3.back); 
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 0.03f);
-            if (Mathf.Abs(Mathf.Abs(dictationTarget.x) + Mathf.Abs(dictationTarget.y)) > 5 )
+            if (Mathf.Abs(Mathf.Abs(dictationTarget.x) + Mathf.Abs(dictationTarget.y)) > 10 )
             {
                 Moveverment(1);
             }
